@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical" >
+
+    <!-- 天气 城市 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/top_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="北京"
+            android:textColor="@color/black_color" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/top_city"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/top_city"
+            android:paddingLeft="4dp"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="12点发布"
+        android:textColor="@color/black_color"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+    <!-- 天气情况 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/d00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="有雾"
+            android:textColor="@color/black_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_today_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="温度22度"
+        android:textColor="@color/black_color"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text="18度"
+            android:textColor="@color/black_color"
+            android:textSize="34sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_quality2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="6"
+                android:text="pm2.5"
+                android:textColor="@color/black_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/tv_quality3"
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    android:ems="6"
+                    android:text="288"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_quality4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:ems="6"
+                    android:text="重度污染"
+                    android:textColor="@color/black_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+    <!-- 下部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="预报"
+            android:textColor="@color/blue"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:id="@+id/tv_next_three"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_six"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_nine"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_twelve"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_fifteen"
+                style="@style/TextViewStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_next_three"
+                style="@style/ViewStyle"
+                android:src="@drawable/d00" />
+
+            <ImageView
+                android:id="@+id/iv_next_six"
+                style="@style/ViewStyle"
+                android:src="@drawable/d00" />
+
+            <ImageView
+                android:id="@+id/iv_next_nine"
+                style="@style/ViewStyle"
+                android:src="@drawable/d00" />
+
+            <ImageView
+                android:id="@+id/iv_next_twelve"
+                style="@style/ViewStyle"
+                android:src="@drawable/d00" />
+
+            <ImageView
+                android:id="@+id/iv_next_fifteen"
+                style="@style/ViewStyle"
+                android:src="@drawable/d00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:id="@+id/tv_next_three_temp"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_six_temp"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_nine_temp"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_twelve_temp"
+                style="@style/TextViewStyle" />
+
+            <TextView
+                android:id="@+id/tv_next_fifteen_temp"
+                style="@style/TextViewStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+    <!-- 未来几天 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" 
+        android:gravity="center"
+        >
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="aa" />
+
+        <ImageView
+            style="@style/ViewStyle"
+            android:layout_weight="3"
+            android:src="@drawable/d00" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="bb" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="cc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+         android:gravity="center"
+        android:layout_marginTop="8dp" >
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="aa" />
+
+        <ImageView
+            style="@style/ViewStyle"
+            android:layout_weight="3"
+            android:src="@drawable/d00" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="bb" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="cc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+         android:gravity="center"
+        android:layout_marginTop="8dp" >
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="aa" />
+
+        <ImageView
+            style="@style/ViewStyle"
+            android:layout_weight="3"
+            android:src="@drawable/d00" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="bb" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="cc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" >
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="aa" />
+
+        <ImageView
+            style="@style/ViewStyle"
+            android:layout_weight="3"
+            android:src="@drawable/d00" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="bb" />
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_weight="4"
+            android:text="cc" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey" />
+
+</LinearLayout>
