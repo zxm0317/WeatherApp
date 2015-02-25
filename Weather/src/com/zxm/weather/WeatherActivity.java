@@ -83,7 +83,7 @@ public class WeatherActivity extends Activity {
 	}
 
 	/**
-	 * 未来3小时内容
+	 * 未来3小时内容  
 	 * 
 	 * @param data
 	 */
