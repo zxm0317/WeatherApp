@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_color"
+    android:background="@color/background_color" 
     android:orientation="vertical" >
 
     <!-- 天气 城市 -->
@@ -20,7 +20,6 @@
             android:textColor="@color/black_color" />
 
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="15dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/top_city"
@@ -31,6 +30,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tv_release"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -52,11 +52,13 @@
         android:orientation="horizontal" >
 
         <ImageView
+            android:id="@+id/iv_now_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/d00" />
 
         <TextView
+            android:id="@+id/tv_now_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
@@ -81,7 +83,7 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/tv_quality"
+            android:id="@+id/tv_now_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -98,12 +100,11 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/tv_quality2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:ems="6"
-                android:text="pm2.5"
+                android:text="@string/pm"
                 android:textColor="@color/black_color"
                 android:textSize="12sp" />
 
@@ -113,7 +114,7 @@
                 android:gravity="right" >
 
                 <TextView
-                    android:id="@+id/tv_quality3"
+                    android:id="@+id/tv_aqi"
                     android:layout_width="47dp"
                     android:layout_height="wrap_content"
                     android:ems="6"
@@ -122,7 +123,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_quality4"
+                    android:id="@+id/tv_quality"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:ems="6"
@@ -258,21 +259,25 @@
         >
 
         <TextView
+            
             style="@style/TextViewStyle"
             android:layout_weight="4"
-            android:text="aa" />
+            android:text="@string/today" />
 
         <ImageView
+            android:id="@+id/iv_today_weather"
             style="@style/ViewStyle"
             android:layout_weight="3"
             android:src="@drawable/d00" />
 
         <TextView
+            android:id="@+id/tv_today_temp_a"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="bb" />
 
         <TextView
+            android:id="@+id/tv_today_temp_b"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="cc" />

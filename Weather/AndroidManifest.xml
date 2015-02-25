@@ -22,7 +22,7 @@
         android:theme="@android:style/Theme.NoTitleBar" >
           <meta-data
             android:name="com.thinkland.juheapi.openid"
-            android:value="JH349278d634f1b6a4e3f09e9b41de1d9f" />
+            android:value="JH8352cb7ecd0e9b8f172817d00da7203a" />
         
         <activity
             android:name="com.zxm.weather.WeatherActivity"

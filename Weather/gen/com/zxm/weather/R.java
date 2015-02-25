@@ -137,15 +137,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ptrShowIndicator=0x7f010004;
     }
     public static final class color {
-        public static final int black_color=0x7f050005;
-        public static final int blue=0x7f050004;
+        public static final int background_color=0x7f050002;
+        public static final int black_color=0x7f050006;
+        public static final int blue=0x7f050005;
         public static final int dark_grey=0x7f050001;
-        public static final int frame_color=0x7f050002;
+        public static final int frame_color=0x7f050003;
         public static final int light_grey=0x7f050000;
         /**      <color name="text_color">#666666</color> 
          */
-        public static final int text_color=0x7f050003;
-        public static final int white_color=0x7f050006;
+        public static final int text_color=0x7f050004;
+        public static final int white_color=0x7f050007;
     }
     public static final class dimen {
         public static final int header_footer_left_right_padding=0x7f060003;
@@ -232,12 +233,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int both=0x7f040003;
         public static final int disabled=0x7f040000;
         public static final int flip=0x7f040008;
-        public static final int imageView1=0x7f04000d;
-        public static final int iv_next_fifteen=0x7f04001d;
-        public static final int iv_next_nine=0x7f04001b;
-        public static final int iv_next_six=0x7f04001a;
-        public static final int iv_next_three=0x7f040019;
-        public static final int iv_next_twelve=0x7f04001c;
+        public static final int iv_next_fifteen=0x7f04001e;
+        public static final int iv_next_nine=0x7f04001c;
+        public static final int iv_next_six=0x7f04001b;
+        public static final int iv_next_three=0x7f04001a;
+        public static final int iv_next_twelve=0x7f04001d;
+        public static final int iv_now_weather=0x7f04000e;
+        public static final int iv_today_weather=0x7f040024;
         public static final int list_city=0x7f04000b;
         public static final int manualOnly=0x7f040004;
         public static final int pullDownFromTop=0x7f040005;
@@ -248,22 +250,25 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int scrollview=0x7f040009;
         public static final int tid=0x7f04000a;
         public static final int top_city=0x7f04000c;
-        public static final int tv1=0x7f040013;
-        public static final int tv_next_fifteen=0x7f040018;
-        public static final int tv_next_fifteen_temp=0x7f040022;
-        public static final int tv_next_nine=0x7f040016;
-        public static final int tv_next_nine_temp=0x7f040020;
-        public static final int tv_next_six=0x7f040015;
-        public static final int tv_next_six_temp=0x7f04001f;
-        public static final int tv_next_three=0x7f040014;
-        public static final int tv_next_three_temp=0x7f04001e;
-        public static final int tv_next_twelve=0x7f040017;
-        public static final int tv_next_twelve_temp=0x7f040021;
-        public static final int tv_quality=0x7f04000f;
-        public static final int tv_quality2=0x7f040010;
-        public static final int tv_quality3=0x7f040011;
-        public static final int tv_quality4=0x7f040012;
-        public static final int tv_today_temp=0x7f04000e;
+        public static final int tv1=0x7f040014;
+        public static final int tv_aqi=0x7f040012;
+        public static final int tv_next_fifteen=0x7f040019;
+        public static final int tv_next_fifteen_temp=0x7f040023;
+        public static final int tv_next_nine=0x7f040017;
+        public static final int tv_next_nine_temp=0x7f040021;
+        public static final int tv_next_six=0x7f040016;
+        public static final int tv_next_six_temp=0x7f040020;
+        public static final int tv_next_three=0x7f040015;
+        public static final int tv_next_three_temp=0x7f04001f;
+        public static final int tv_next_twelve=0x7f040018;
+        public static final int tv_next_twelve_temp=0x7f040022;
+        public static final int tv_now_temp=0x7f040011;
+        public static final int tv_now_weather=0x7f04000f;
+        public static final int tv_quality=0x7f040013;
+        public static final int tv_release=0x7f04000d;
+        public static final int tv_today_temp=0x7f040010;
+        public static final int tv_today_temp_a=0x7f040025;
+        public static final int tv_today_temp_b=0x7f040026;
     }
     public static final class layout {
         public static final int city_item=0x7f030000;
