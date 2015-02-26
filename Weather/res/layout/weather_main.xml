@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color" 
+    android:background="@color/background_color"
     android:orientation="vertical" >
 
     <!-- 天气 城市 -->
@@ -254,12 +254,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp" 
-        android:gravity="center"
-        >
+        android:layout_marginTop="8dp"
+        android:gravity="center" >
 
         <TextView
-            
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="@string/today" />
@@ -282,6 +280,7 @@
             android:layout_weight="4"
             android:text="cc" />
     </LinearLayout>
+    <!-- 星期 -->
 
     <View
         android:layout_width="match_parent"
@@ -292,10 +291,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-         android:gravity="center"
-        android:layout_marginTop="8dp" >
+        android:layout_marginTop="8dp"
+        android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_tommorrow"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="aa" />
@@ -306,11 +306,13 @@
             android:src="@drawable/d00" />
 
         <TextView
+            android:id="@+id/tv_tommorrow_temp_a"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="bb" />
 
         <TextView
+            android:id="@+id/tv_tommorrow_temp_b"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="cc" />
@@ -325,10 +327,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-         android:gravity="center"
-        android:layout_marginTop="8dp" >
+        android:layout_marginTop="8dp"
+        android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_thirdday"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="aa" />
@@ -339,11 +342,13 @@
             android:src="@drawable/d00" />
 
         <TextView
+            android:id="@+id/tv_thirdday_temp_a"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="bb" />
 
         <TextView
+            android:id="@+id/tv_thirdday_temp_b"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="cc" />
@@ -357,11 +362,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         android:gravity="center"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp" >
+        android:layout_marginTop="8dp"
+        android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_fourthday"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="aa" />
@@ -372,11 +378,13 @@
             android:src="@drawable/d00" />
 
         <TextView
+            android:id="@+id/tv_fourthday_temp_a"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="bb" />
 
         <TextView
+            android:id="@+id/tv_fourthday_temp_b"
             style="@style/TextViewStyle"
             android:layout_weight="4"
             android:text="cc" />

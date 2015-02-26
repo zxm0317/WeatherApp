@@ -252,6 +252,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int top_city=0x7f04000c;
         public static final int tv1=0x7f040014;
         public static final int tv_aqi=0x7f040012;
+        public static final int tv_fourthday=0x7f04002d;
+        public static final int tv_fourthday_temp_a=0x7f04002e;
+        public static final int tv_fourthday_temp_b=0x7f04002f;
         public static final int tv_next_fifteen=0x7f040019;
         public static final int tv_next_fifteen_temp=0x7f040023;
         public static final int tv_next_nine=0x7f040017;
@@ -266,9 +269,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_now_weather=0x7f04000f;
         public static final int tv_quality=0x7f040013;
         public static final int tv_release=0x7f04000d;
+        public static final int tv_thirdday=0x7f04002a;
+        public static final int tv_thirdday_temp_a=0x7f04002b;
+        public static final int tv_thirdday_temp_b=0x7f04002c;
         public static final int tv_today_temp=0x7f040010;
         public static final int tv_today_temp_a=0x7f040025;
         public static final int tv_today_temp_b=0x7f040026;
+        public static final int tv_tommorrow=0x7f040027;
+        public static final int tv_tommorrow_temp_a=0x7f040028;
+        public static final int tv_tommorrow_temp_b=0x7f040029;
     }
     public static final class layout {
         public static final int city_item=0x7f030000;

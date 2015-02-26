@@ -23,7 +23,7 @@ import com.zxm.bean.HoursWeatherBean;
 import com.zxm.bean.WeatherBean;
 
 public class WeatherActivity extends Activity {
-	 private Context mContext;
+	private Context mContext;
 	private List<HoursWeatherBean> list;
 	private String chageCity = "北京";
 	private TextView top_city,// 城市
@@ -73,17 +73,17 @@ public class WeatherActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.weather_main);
-		mContext=this;
+		mContext = this;
 		WeatherData data = WeatherData.getInstance();
 		parse3h(data);
 		// data.getForecast3h(cityname, jsonCallBack);
-		 initWeatherData(data);
-		 initView();
+		initWeatherData(data);
+		initView();
 
 	}
 
 	/**
-	 * 未来3小时内容  
+	 * 未来3小时内容
 	 * 
 	 * @param data
 	 */
@@ -135,6 +135,9 @@ public class WeatherActivity extends Activity {
 		tv_today_temp_b = (TextView) findViewById(R.id.tv_today_temp_b);
 		iv_now_weather = (ImageView) findViewById(R.id.iv_now_weather);
 		iv_today_weather = (ImageView) findViewById(R.id.iv_today_weather);
+		tv_tommorrow=(TextView) findViewById(R.id.tv_tommorrow);
+		tv_tommorrow_temp_a=(TextView) findViewById(R.id.tv_tommorrow_temp_a);
+		tv_tommorrow_temp_b=(TextView) findViewById(R.id.tv_tommorrow_temp_b);
 	}
 
 	/**
@@ -166,16 +169,22 @@ public class WeatherActivity extends Activity {
 		// 温度 8℃~16℃" ↑ ↓ °
 		tv_today_temp.setText("↑ " + temp_str_a + "°   ↓" + temp_str_b + "°");
 		tv_now_temp.setText(bean.getNow_temp() + " °");
-		iv_today_weather.setImageResource(getResources().getIdentifier("d" + bean.getWeather_id(), "drawable", mContext.getPackageName()));
+		iv_today_weather.setImageResource(getResources().getIdentifier(
+				"d" + bean.getWeather_id(), "drawable",
+				mContext.getPackageName()));
 
 		tv_today_temp_a.setText(temp_str_a + "°");
 		tv_today_temp_b.setText(temp_str_b + "°");
 		List<FutureWeatherBean> futureList = bean.getfList();
-		/*if (futureList != null && futureList.size() == 3) {
-			setFutureData(tv_tommorrow, iv_tommorrow_weather, tv_tommorrow_temp_a, tv_tommorrow_temp_b, futureList.get(0));
-			setFutureData(tv_thirdday, iv_thirdday_weather, tv_thirdday_temp_a, tv_thirdday_temp_b, futureList.get(1));
-			setFutureData(tv_fourthday, iv_fourthday_weather, tv_fourthday_temp_a, tv_fourthday_temp_b, futureList.get(2));
-		}*/
+		/*
+		 * if (futureList != null && futureList.size() == 3) {
+		 * setFutureData(tv_tommorrow, iv_tommorrow_weather,
+		 * tv_tommorrow_temp_a, tv_tommorrow_temp_b, futureList.get(0));
+		 * setFutureData(tv_thirdday, iv_thirdday_weather, tv_thirdday_temp_a,
+		 * tv_thirdday_temp_b, futureList.get(1)); setFutureData(tv_fourthday,
+		 * iv_fourthday_weather, tv_fourthday_temp_a, tv_fourthday_temp_b,
+		 * futureList.get(2)); }
+		 */
 		Calendar c = Calendar.getInstance();
 		int time = c.get(Calendar.HOUR_OF_DAY);
 		String prefixStr = null;
@@ -184,9 +193,24 @@ public class WeatherActivity extends Activity {
 		} else {
 			prefixStr = "n";
 		}
-		iv_now_weather.setImageResource(getResources().getIdentifier(prefixStr + bean.getWeather_id(), "drawable", mContext.getPackageName()));
+		iv_now_weather.setImageResource(getResources().getIdentifier(
+				prefixStr + bean.getWeather_id(), "drawable",
+				mContext.getPackageName()));
+		// 星期数据
+	List<FutureWeatherBean> list = bean.getfList();
+		setNextWeek(tv_tommorrow, tv_tommorrow_temp_a, tv_tommorrow_temp_b,
+				iv_tommorrow_weather, list.get(0));
+	}
 
-		
+	private void setNextWeek(TextView t1, TextView t2, TextView t3,
+			ImageView v, FutureWeatherBean bean) {
+		t1.setText(bean.getWeek());
+		String[] tmps = bean.getTemp().split("~");
+		t2.setText(tmps[0]);
+		t2.setText(tmps[1]);
+		v.setImageResource(getResources().getIdentifier(
+				"d" + bean.getWeather_id(), "drawable",
+				mContext.getPackageName()));
 	}
 
 	/**
@@ -224,18 +248,16 @@ public class WeatherActivity extends Activity {
 				List<FutureWeatherBean> list = new ArrayList<FutureWeatherBean>();
 				for (int i = 0; i < futureArray.length(); i++) {
 					JSONObject futureJson = futureArray.getJSONObject(i);
+					if (i == 0) {
+						continue;
+					}
 					FutureWeatherBean futureBean = new FutureWeatherBean();
 					futureBean.setTemp(futureJson.getString("temperature"));
-					if (i == 0) {
-						futureBean.setWeek(futureJson.getString("今天"));
-					} else {
-						futureBean.setWeek(futureJson.getString("week"));
-
-					}
+					futureBean.setWeek(futureJson.getString("week"));
 					futureBean.setWeather_id(futureJson.getJSONObject(
 							"weather_id").getString("fa"));
 					list.add(futureBean);
-					if (list.size() == 4) {
+					if (list.size() == 3) {
 						break;
 					}
 				}
